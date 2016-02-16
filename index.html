@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>05 Worksheet Homework Spring 2016 by Anderson-Lab</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>05 Worksheet Homework Spring 2016</h1>
+        <p>DATA 210</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/Anderson-Lab/05-worksheet-homework-spring-2016" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/Anderson-Lab/05-worksheet-homework-spring-2016/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/Anderson-Lab/05-worksheet-homework-spring-2016/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <ol>
+<li>Change directories to /home/vagrant/book/ch05/data</li>
+<li>Count the number of words and lines and characters using the wc command in the file named alice.txt (e.g., wc alice.txt)</li>
+<li>
+<p>Using the header command add labels to these columns. Hint: You may want to use awk to format the output from wc before using header</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/book/ch05/data
+wc alice.txt <span class="pl-k">|</span> awk <span class="pl-s"><span class="pl-pds">'</span>{ print $1"\t"$2"\t"$3"\t"$4}<span class="pl-pds">'</span></span></pre></div>
+
+<p>3735    29461   167518  alice.txt</p>
+</li>
+<li><p>Now change the order so that the file is the first column</p></li>
+<li>Print out the first 10 lines of alice.txt</li>
+<li>Print out the last 10 lines.</li>
+<li>Print out lines 5-15 inclusively.</li>
+<li>
+<p>Grab all of the chapter numbers and names from alice.txt, but make sure they are printed out so that the names are lined up.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Hint: Remember this command and remember what you can do with awk</span>
+grep -i chapter alice.txt</pre></div>
+</li>
+<li><p>Do the same, but now only do it for chapters that begin with The.</p></li>
+<li>Now find all lines that have the word the in them.</li>
+<li>Now find all the lines that begin with the word The with the T capitalized</li>
+<li>Now find all the lines that begin with the word the or The</li>
+<li>How many lines are there that match this last pattern? Hint: Don't forget about the wc command</li>
+<li>Now randomly sample those lines using the sample command and a 10% probability of keeping each line</li>
+<li>Print out the chapter headings, but replace the word CHAPTER with CHP</li>
+<li>Now remove the word chapter all together and print out the headings</li>
+<li>Now change all the hyphens (-) to spaces).</li>
+<li>Print out the chapters but with everything in lowercase</li>
+<li>Now all in uppercase</li>
+<li>Now I want you to write a script called book_info.sh. This should take 1 argument that is the name of the book and print, the number of lines in the entire book. It should look for a print out the number of chapters. It should print out the chapters, but with the actual chapter name justified (aligned).</li>
+</ol>
+
+<h3>
+<a id="now-we-are-going-to-switch-gears-a-little-and-perform-operations-on-csv-files" class="anchor" href="#now-we-are-going-to-switch-gears-a-little-and-perform-operations-on-csv-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Now we are going to switch gears a little and perform operations on csv files</h3>
+
+<ol>
+<li>Use csvcut to get the sepal_width and sepal_length columns from Iris-setosa.csv</li>
+<li>Print those nicely with csvlook</li>
+<li>Now only print those lines that have a sepal_length greater than 5.0. Hint: use awk</li>
+<li>Read the names from names.csv and print out the first name and then a space and then the last name</li>
+<li>Now do the same, but keep the other columns as well</li>
+<li>Combine the three different types of iris flower files Iris-setosa.csv Iris-versicolor.csv and Iris-virginia.csv into a single file. Make sure you do not repeat the headers. Just stack them vertically.</li>
+</ol>
+
+<p>Done! We have a lot to do with HTML/XML and JSON, but we'll save that for Thursday!</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/Anderson-Lab">Anderson-Lab</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
